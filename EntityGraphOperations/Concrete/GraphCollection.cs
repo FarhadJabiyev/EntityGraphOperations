@@ -10,7 +10,7 @@ using System.Linq.Expressions;
 namespace EntityGraphOperations.Concrete
 {
     /// <summary>
-    /// Represents a collection entity in an entity.
+    /// Represents a collection of entity.
     /// </summary>
     /// <typeparam name="TEntity">Type of the entity which is owner of the collection entity</typeparam>
     /// <typeparam name="TChildEntity">The type of the elements of the collection entity.</typeparam>
