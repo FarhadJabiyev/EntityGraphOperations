@@ -17,17 +17,18 @@ ID is auto-generated primary key. In the meanwhile, we do not want to insert sam
 If Id is 0, and there is not any corresponding entity in the database with the specified Digits and prefix, then it must be inserted. Otherwise, if a change has occurred, then it must be updated and so on…
 
 Now, let’s do the same things all over again for a different entity graph. Again, and again… 
-The solution – Use EntityGraphOperations for Entity Framework Code First
+
+#The solution – Use EntityGraphOperations for Entity Framework Code First
+
 Fatures:
 -	Automatically define state of all entities 
 -	Update only those entities which has changed
 -	Fluent API style mapping of special entity configurations
 -	Let the user manually manage graph after automatically determining state of all entities
+
 The example:
 Let’s say I have get a Person object. Person could has many phones, a Document and could has a spouse.
     
-
-
 ```
 public class Person
     {
