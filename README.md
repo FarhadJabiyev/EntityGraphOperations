@@ -1,13 +1,17 @@
 #The problem – Tons of repetitive code segments
 Usually we found ourselves writing very similar codes for defining the state of entities.  Normally, the procedure is as follows:
+
 -	Determine which properties are needed for defining existence of the entity in the database (this could be primary key properties or unique key properties).
 -	If the result is null then the entity must be inserted.
 -	If the result is not null and if a change has occurred in any part of the entity, then the entity must be updated.
 -	If we have a collection of entities, then we need to compare it with the ones in the database and delete those which are not exist in the collection anymore.
+
 and so on …
-Additional explanation about why sometimes we need unique key properties in addition to primary key properties:
+
+##Additional explanation about why sometimes we need unique key properties in addition to the primary key properties
+
 Say we have Phone entity which has some properties: 
-     ID, 
+     ID,
      Digits, 
      Prefix
      …
@@ -20,7 +24,7 @@ Now, let’s do the same things all over again for a different entity graph. Aga
 
 #The solution – Use EntityGraphOperations for Entity Framework Code First
 
-Fatures:
+##Features:
 -	Automatically define state of all entities 
 -	Update only those entities which has changed
 -	Fluent API style mapping of special entity configurations
