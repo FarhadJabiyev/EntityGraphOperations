@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>EntityGraphOperations</id>
+    <version>1.0.0</version>
+    <authors>FarhadJabiyev</authors>
+    <owners>FarhadJabiyev</owners>
+    <licenseUrl>https://github.com/FarhadJabiyev/EntityGraphOperations</licenseUrl>
+    <projectUrl>https://github.com/FarhadJabiyev/EntityGraphOperations</projectUrl>
+    <iconUrl>https://cdn0.iconfinder.com/data/icons/iVista2/128/New_Database.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>EntityGraphOperations for Entity Framework Code First automatically defines states of an entity graph.</description>
+    <releaseNotes>First Release.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>EntityFramework EF CodeFirst EntityGraph EntityGraphOperations Fluent</tags>
+    <dependencies>
+      <dependency id="EntityFramework" version="6.1.3" />
+    </dependencies>
+  </metadata>
+</package>
