@@ -8,7 +8,7 @@ Usually we found ourselves writing very similar codes for defining the state of 
 
 and so on …
 
-##Additional explanation about why sometimes we need unique key properties in addition to the primary key properties
+###Additional explanation about why sometimes we need unique key properties in addition to the primary key properties
 
 Say we have Phone entity which has some properties: 
      ID,
@@ -24,7 +24,7 @@ Now, let’s do the same things all over again for a different entity graph. Aga
 
 #The solution – Use EntityGraphOperations for Entity Framework Code First
 
-##Features:
+###Features:
 -	Automatically define state of all entities 
 -	Update only those entities which has changed
 -	Fluent API style mapping of special entity configurations
