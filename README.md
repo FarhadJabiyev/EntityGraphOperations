@@ -35,18 +35,18 @@ Let’s say I have get a Person object. Person could has many phones, a Document
     
 ```
 public class Person
-    {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string MiddleName { get; set; }
-        public int Age { get; set; }
-        public int DocumentId {get; set;}
-        
-        public virtual ICollection<Phone> Phones { get; set; }
-        public virtual Document Document { get; set; }
-        public virtual PersonSpouse PersonSpouse { get; set; }
-    }
+{
+     public int Id { get; set; }
+     public string FirstName { get; set; }
+     public string LastName { get; set; }
+     public string MiddleName { get; set; }
+     public int Age { get; set; }
+     public int DocumentId {get; set;}
+   
+     public virtual ICollection<Phone> Phones { get; set; }
+     public virtual Document Document { get; set; }
+     public virtual PersonSpouse PersonSpouse { get; set; }
+}
   ```
 
 I want to determine the state of all entities which is included in the graph. 
@@ -57,6 +57,7 @@ context.InsertOrUpdateGraph(person)
             // Delete missing phones.
             entity.HasCollection(p => p.Phones)
                .DeleteMissingEntities();
+               
             // Delete if spouse is not exist anymore.
             entity.HasNavigationalProperty(m => m.PersonSpouse)
                   .DeleteIfNull();
