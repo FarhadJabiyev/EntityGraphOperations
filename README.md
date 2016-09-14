@@ -30,7 +30,7 @@ Now, let’s do the same things all over again for a different entity graph. Aga
 -	Fluent API style mapping of special entity configurations
 -	Let the user manually manage graph after automatically determining state of all entities
 
-####The example:
+###The example:
 Let’s say I have get a Person object. Person could has many phones, a Document and could has a spouse.
     
 ```csharp
