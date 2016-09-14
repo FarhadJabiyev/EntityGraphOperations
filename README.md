@@ -1,3 +1,9 @@
+### NuGet Packages
+
+```
+Install-Package EntityGraphOperations
+```
+
 #The problem – Tons of repetitive code segments
 Usually we found ourselves writing very similar codes for defining the state of entities.  Normally, the procedure is as follows:
 
