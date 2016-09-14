@@ -33,7 +33,7 @@ Now, let’s do the same things all over again for a different entity graph. Aga
 The example:
 Let’s say I have get a Person object. Person could has many phones, a Document and could has a spouse.
     
-```
+```csharp
 public class Person
 {
      public int Id { get; set; }
@@ -50,7 +50,7 @@ public class Person
   ```
 
 I want to determine the state of all entities which is included in the graph. 
-```
+```csharp
 context.InsertOrUpdateGraph(person)
        .After(entity =>
        {
@@ -65,7 +65,7 @@ context.InsertOrUpdateGraph(person)
 ```
  Also as you remember  unique key properties could play role while defining the state of Phone entity. For such special purposes we have `ExtendedEntityTypeConfiguration<>` class, which inherits from `EntityTypeConfiguration<>`. If we want to use such special configurations then we must inherit our mapping classes from `ExtendedEntityTypeConfiguration<>`, rather than `EntityTypeConfiguration<>`. For example:
 
-```
+```csharp
 public class PhoneMap: ExtendedEntityTypeConfiguration<Phone>
     {
         public PhoneMap()
