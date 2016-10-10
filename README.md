@@ -1,5 +1,7 @@
 Contact me if you have any problem or question. (email: cebiyevferhad@hotmail.com)
 
+You can check the code-project article for reading and downloading a step-by-step sample project demonstration. (http://www.codeproject.com/Articles/1131322/Automatically-Define-the-State-of-All-Entities-in)
+
 ### NuGet Packages
 
 ```
