@@ -9,12 +9,12 @@ Install-Package EntityGraphOperations
 ```
 
 #The problem – Tons of repetitive code segments
-Usually we found ourselves writing very similar codes for defining the state of entities.  Normally, the procedure is as follows:
+Usually we find ourselves writing very similar codes for defining the state of entities.  Normally, the procedure is as follows:
 
 -	Determine which properties are needed for defining existence of the entity in the database (this could be primary key properties or unique key properties).
 -	If the result is null then the entity must be inserted.
 -	If the result is not null and if a change has occurred in any part of the entity, then the entity must be updated.
--	If we have a collection of entities, then we need to compare it with the ones in the database and delete those which are not exist in the collection anymore.
+-	If we have a collection of entities, then we need to compare it with the ones in the database and delete those which do not exist in the collection anymore.
 
 and so on …
 
@@ -26,7 +26,7 @@ Say we have Phone entity which has some properties:
      Prefix
      …
 
-ID is auto-generated primary key. In the meanwhile, we do not want to insert same phone number to the table with a different ID. So Digits and Prefix properties are unique together. This situation is forcing us to take into consideration this:
+ID is auto-generated primary key. We do not want to insert same phone number to the table with a different ID. So Digits and Prefix properties are unique together. This situation is forcing us to take into consideration the followings:
 
 If Id is 0, and there is not any corresponding entity in the database with the specified Digits and prefix, then it must be inserted. Otherwise, if a change has occurred, then it must be updated and so on…
 
@@ -36,12 +36,12 @@ Now, let’s do the same things all over again for a different entity graph. Aga
 
 ###Features:
 -	Automatically define state of all entities 
--	Update only those entities which has changed
+-	Update only those entities which have changed
 -	Fluent API style mapping of special entity configurations
 -	Let the user manually manage graph after automatically determining state of all entities
 
 ###The example:
-Let’s say I have get a Person object. Person could has many phones, a Document and could has a spouse.
+Let’s say I have got a Person object. Person could have many phones, a Document and he/she could have a spouse.
     
 ```csharp
 public class Person
@@ -59,7 +59,7 @@ public class Person
 }
   ```
 
-I want to determine the state of all entities which is included in the graph. 
+I want to determine the state of all entities which are included in the graph. 
 ```csharp
 context.InsertOrUpdateGraph(person)
        .After(entity =>
