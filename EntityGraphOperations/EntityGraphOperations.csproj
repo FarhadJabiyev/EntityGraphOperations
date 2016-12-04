@@ -39,8 +39,9 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Extensions.General">
-      <HintPath>..\..\..\..\Work\VEMTAS\Source Code\Vemtas\Extensions.General\bin\Debug\Extensions.General.dll</HintPath>
+    <Reference Include="Extensions.General, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\net45\Extensions.General.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
