@@ -9,12 +9,13 @@ Install-Package EntityGraphOperations
 ```
 
 #The problem – Tons of repetitive code segments
+
 Usually we find ourselves writing very similar codes for defining the state of entities.  Normally, the procedure is as follows:
 
--	Determine which properties are needed for defining existence of the entity in the database (this could be primary key properties or unique key properties).
--	If the result is null then the entity must be inserted.
--	If the result is not null and if a change has occurred in any part of the entity, then the entity must be updated.
--	If we have a collection of entities, then we need to compare it with the ones in the database and delete those which do not exist in the collection anymore.
+- Determine which properties are needed for defining existence of the entity in the database (this could be primary key properties or unique key properties).
+- If the result is null then the entity must be inserted.
+- If the result is not null and if a change has occurred in any part of the entity, then the entity must be updated.
+- If we have a collection of entities, then we need to compare it with the ones in the database and delete those which do not exist in the collection anymore.
 
 and so on …
 
