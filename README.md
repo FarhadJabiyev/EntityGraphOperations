@@ -8,7 +8,7 @@ You can check the code-project article for reading and downloading a step-by-ste
 Install-Package EntityGraphOperations
 ```
 
-#The problem – Tons of repetitive code segments
+# The problem – Tons of repetitive code segments
 
 Usually we find ourselves writing very similar codes for defining the state of entities.  Normally, the procedure is as follows:
 
@@ -19,7 +19,7 @@ Usually we find ourselves writing very similar codes for defining the state of e
 
 and so on …
 
-###Additional explanation about why sometimes we need unique key properties in addition to the primary key properties
+### Additional explanation about why sometimes we need unique key properties in addition to the primary key properties
 
 Say we have Phone entity which has some properties: 
      ID,
@@ -35,13 +35,13 @@ Now, let’s do the same things all over again for a different entity graph. Aga
 
 #The solution – Use EntityGraphOperations for Entity Framework Code First
 
-###Features:
+### Features:
 -	Automatically define state of all entities 
 -	Update only those entities which have changed
 -	Fluent API style mapping of special entity configurations
 -	Let the user manually manage graph after automatically determining state of all entities
 
-###The example:
+### The example:
 Let’s say I have got a Person object. Person could have many phones, a Document and he/she could have a spouse.
     
 ```csharp
