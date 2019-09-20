@@ -33,7 +33,7 @@ If Id is 0, and there is not any corresponding entity in the database with the s
 
 Now, let’s do the same things all over again for a different entity graph. Again, and again… 
 
-#The solution – Use EntityGraphOperations for Entity Framework Code First
+# The solution – Use EntityGraphOperations for Entity Framework Code First
 
 ### Features:
 -	Automatically define state of all entities 
